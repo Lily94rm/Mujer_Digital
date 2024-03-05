@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Microsof Excel 2019</title>
+    <!--logo de mi página web-->
+    <link rel="icon" type="image/PNG" href="./imagenes/Japw.png">
+    <link rel="stylesheet" href="sexcel.css">
+    <script defer src="./main.js"></script>
+   </head>
+<body>
+<header>
+    <div class="Contenedor 1" align="center">
+        <h1>Microsoft Excel</h1>
+        <img src="./imagenes/ECxel.png" alt="EXCEL" height="75px">
+
+        <div class="button" style="width: fit-content;">
+          <form id="formSelect">
+            <label for="aplicaciones">Seleccione un nuevo curso:</label>
+            <select class="form-select" id="aplicaciones" aria-label="select application">
+              <option selected>Selecciona una aplicación</option>
+              <option value="index.html">INICIO</option>
+              <option value="word.html">WORD</option>
+              <option value="power.html">POWER POINT</option>
+              <option value="HMM.html">HAbilidades blandas</option>
+              <option value="POWER POINT">Habilidades transversales</option>
+              <option value="POWER POINT">yo Programo</option>
+              <option value="POWER POINT">Orientación Laboral</option>
+            </select>
+          </form>
+      
+          <script>
+            document.getElementById("aplicaciones").addEventListener("change", function() {
+              var selectedOption = this.value;
+              if (selectedOption) {
+                window.location.href = selectedOption;
+              }
+            });
+            </script>
+        </div>
+    </div>
+</header>
+    
+ 
+
+     <p>Excel es una herramienta muy eficaz para obtener información con significado a partir de grandes cantidades de datos.<br>
+       También funciona muy bien con cálculos sencillos y para realizar el seguimiento de casi cualquier tipo de información.<br>
+       La clave para desbloquear todo este potencial es la cuadrícula de las celdas. Las celdas pueden contener números, texto o<br>
+       fórmulas. Los datos se escriben en las celdas y se agrupan en filas y columnas. Esto permite sumar datos, ordenarlos y filtrarlos,<br>
+       ponerlos en tablas y crear gráficos muy visuales. </p>
+       <p>Veamos los pasos básicos para empezar.</p>
+
+       <!--contenedor general para poner todas las noticias-->
+      <div class="contenedor">
+       <!--primera noticia-->
+       <div class="noticias">
+        <h2>Crear libro nuevo</h2>
+        <div id="contenido">
+          <!--este contenedor es el que quiero ocultar/mostrar-->
+          <p>Los documentos de Excel se denominan libros. Cada libro tiene hojas, que normalmente se denominan hojas de cálculo. <br>
+            Puede agregar tantas hojas como desee a un libro o puede crear libros nuevos para separar los datos.</p> <br>
+          <ol><li>Haga clic en Archivo y después en Nuevo.</li>
+          <li>En Nuevo, haga clic en Libro en blanco.</li></ol>
+          <img src="./imagenes/newbook.jpg" alt="Libro en blanco">
+        </div>
+        <button onclick='muestra_oculta("contenido")' class="btn btn-primary" form="Contenido1" >↓</button>
+      </div>
+
+      <div class="noticias" align="center">
+        <h2>Introducir datos</h2>
+         <!--este contenedor es el que quiero ocultar/mostrar-->
+        <div id="contenido2" align="center">
+         <ol>
+          <li>Haga clic en una celda vacía.</li> 
+          <li>Por ejemplo, la celda A1 de una hoja nueva. Se hace referencia a las celdas según su ubicación en la fila y la columna de la hoja, de modo que la celda A1 es la primera fila de la columna A.</li>
+          <li>Escriba texto o un número en la celda.</li>
+          <li>Presione ENTRAR o TAB para pasar a la celda siguiente</li>
+        </ol>
+        </div>
+        <button onclick='muestra_oculta("contenido2")' class="btn btn-primary" form="Contenido2" >↓</button>
+      </div>
+
+      <div class="noticias">
+        <h2>Introducir datos</h2>
+        <div id="contenido3">
+          <!--este contenedor es el que quiero ocultar/mostrar-->
+         <ol><li>Seleccione la celda o el rango de celdas a las que desea agregar un borde.</li>
+          <li>En la pestaña inicio, en el grupo Fuente, haga clic en la flecha junto a Bordes y, después, haga clic en el estilo de borde que quiere.</li></ol>
+        <img src="./Excel/bordes.gif" alt="bordes">
+        </div>
+        <button onclick='muestra_oculta("contenido3")' class="btn btn-primary" form="Contenido3" >↓</button>
+      </div>
+      
+      <div class="noticias">
+        <h2>Introducir datos</h2>
+        <div id="contenido4">
+          <!--este contenedor es el que quiero ocultar/mostrar-->
+         <ol><li>Seleccione la celda o el rango de celdas a las que desea agregar un borde.</li>
+          <li>En la pestaña inicio, en el grupo Fuente, haga clic en la flecha junto a Bordes y, después, haga clic en el estilo de borde que quiere.</li></ol>
+        <img src="./imagenes/bordes.gif" alt="bordes">
+        </div>
+        <button onclick='muestra_oculta("contenido4")' class="btn btn-primary" form="Contenido4" >↓</button>
+      </div>
+
+      </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja project by Krissia Díaz</title>
+    <!--llamo al archivo de CSS-->
+    <link rel="stylesheet" href="./PPT/estilo.css">
+    <!--llamo al archivo de Javascript-->
+    <link rel="icon" type="image/png" href="/Logo.png">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./PPT/Logo-1.png" alt="Logo de JA ElSalvador">
+        </div>
+        <h1>#Proyecto LAMARR 2024 By: Krissia Díaz</h1>
+        <nav>
+            <ul>
+                <li><a href="https://jaelsalvador.org/">Conocer Junior Achievement El Salvador</a></li>
+                <li><a href="https://www.facebook.com/JAElSalvador.org/?locale=es_LA">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Barra">
+        <form id="formSelect">
+          <label for="aplicaciones">Seleccione un curso:</label>
+          <select class="form-select" id="aplicaciones" aria-label="select application">
+            <option selected>Selecciona una aplicación</option>
+            <option value="index.html">INICIO</option>
+            <option value="./word.html">WORD</option>
+            <option value="excel.html">EXCEL</option>
+            <option value="muchas.html">HABILIDADES BLANDAS</option>
+            <option value="funpres.html">HABILIDADES TRANSVERSALES</option>
+          </select>
+        </form>
+    
+        <script>
+        document.getElementById("aplicaciones").addEventListener("change", function() {
+          var selectedOption = this.value;
+          if (selectedOption) {
+            window.location.href = selectedOption;
+          }
+        });
+        </script>
+      </div>
+    <!---Información-->
+    <div class="contenedor">
+        <div class="caja_cajaIzquierda">
+            <img src="./PPT/Microsoft_Office_PowerPoint_(2019–present).svg.webp" alt="PowerPoint" class="imagen-circular">
+            <h2>PowerPoint</h2>
+            
+            <!--este contenido es el que quiero ocultar/mostrar-->
+            <div id="contenido1">
+                <p>Microsoft PowerPoint es un programa de presentación desarrollado por la empresa Microsoft para sistemas operativos Windows, macOS y últimamente para Android y iOS. Viene integrado en el paquete ofimático llamado Microsoft Office. PowerPoint es uno de los programas de presentación más extendidos. Es ampliamente utilizado en distintos campos de la enseñanza, los negocios, entre otros...</p> 
+            </div>
+            
+            <button onclick="muestra_oculta('contenido1')" class="btn btn-primary" form="contenido1">Ver más</button>
+            <style>
+                #contenido1{display:none;}
+            </style>
+        </div>
+        
+
+        <!---Información 1-->
+        <div class="caja_cajaCentro">
+            <img src="./PPT/Microsoft_Office_PowerPoint_(2019–present).svg.webp" alt="Historia" class="imagen-circular">
+            <h2>Historia</h2>
+            
+            <!--este contenido es el que quiero ocultar/mostrar-->
+            <div id="contenido2">
+            <p>Microsoft Power Point fue desarrollado por Dennis Austin y Thomas Rudkin y se suponía que se llamaría Presentador, pero el nombre no se adaptó debido a problemas de marcas registradas, por lo que fue rebautizado como Power Point en 1987 como sugirió Robert Gaskins.
+                En agosto del año 1987, Microsoft compró Forethought por $ 14 millones y lo convirtió en su unidad de negocios de gráficos, donde la compañía continuó desarrollando el software... </p>
+            </div>
+            
+            <button onclick="muestra_oculta('contenido2')" class="btn btn-primary" form="contenido2">Ver más</button>
+            <style>
+                #contenido2{display:none;}
+            </style>
+        </div>
+
+        <!---Información 2--->
+        <div class="caja_derecha">
+            <img src="./PPT/Microsoft_Office_PowerPoint_(2019–present).svg.webp" alt="Vídeo" class="imagen-circular">
+            <h2>Vídeo</h2>
+            
+            <!--este contenido es el que quiero ocultar/mostrar-->
+            <div id="contenido3">
+            <p>Aprendimos a hacer diversas animaciones y transiciones en PowerPoint como aparecen en el video lo que nos permite dar presentaciones más creativas y llamativas pero elegantes... </p>
+       
+            
+            <video width="360" heigth="315" controls>
+            <source src="./PPT/Video de animaciones.mp4" type="video/mp4"></video>
+        </div>
+            
+        <button onclick="muestra_oculta('contenido3')" class="btn btn-primary" form="contenido3">Ver más</button>
+        <style>
+            #contenido3{display:none;}
+        </style>
+        </div>
+    </div>
+  
+    <footer>
+        <div class="row border-top border-light mx-xl-5 py-4">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-white">
+                    &copy; <a class="text-dark font-weight-semi-bold" href="#">PROYECTO LAMARR</a>.Microsoft PowerPoint
+                    by Krissia Díaz
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
